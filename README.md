@@ -81,6 +81,16 @@ python -m venv venv
 pip install -r requirements.txt
 ```
 
+### Step 4: Add Model 
+download the model from -> https://www.kaggle.com/models/ayushrawat0009/finalbert-tuned-model
+then go to config.py then `EMBEDDING_MODEL_PATH = os.getenv(
+    "EMBEDDING_MODEL_PATH", 
+    r"Add Model Path Here"
+)` set the model path here
+
+if you what to use ollama first download the ollama and start the ollama sever ans in config.py set up `OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "ollama server url")` here paste the server link or you ollama
+
+
 ### Step 3: Run the Application!
 Start the unified server launcher:
 ```powershell
