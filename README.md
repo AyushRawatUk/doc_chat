@@ -52,7 +52,6 @@ DocuMind uses a modular, decoupled **Retrieval-Augmented Generation (RAG)** layo
 * **Frontend**: React (Single Page Client using Tailwind CSS, Lucide icons, and Babel in-browser compiler for zero-dependency instant launches).
 * **Backend**: Python 3.8+ with **FastAPI** & **Uvicorn** for async high-efficiency operations.
 * **Vector Index**: **FAISS** (Flat L2 index, saved to disk per-document for dynamic search modularity).
-* **Local Embeddings**: `sentence-transformers/all-MiniLM-L6-v2` loaded locally (384-dimensional dense vectors, zero API cost).
 * **File Parsers**: `pdfplumber` (PDF layout & tables), `pypdf` (fallback PDF extractor), `python-docx` (Word paragraph grouping).
 * **Conversational Cache**: **SQLite** via **SQLAlchemy ORM** (maintains sessions, chat transcripts, and JSON citation logs).
 
@@ -82,13 +81,19 @@ pip install -r requirements.txt
 ```
 
 ### Step 4: Add Model 
-download the model from -> https://www.kaggle.com/models/ayushrawat0009/finalbert-tuned-model
-then go to config.py then `EMBEDDING_MODEL_PATH = os.getenv(
+download the model from -> https://www.kaggle.com/models/ayushrawat0009/finalbert-tuned-model (embedding model)
+then go to config.py `EMBEDDING_MODEL_PATH = os.getenv(
     "EMBEDDING_MODEL_PATH", 
     r"Add Model Path Here"
 )` set the model path here
 
-if you what to use ollama first download the ollama and start the ollama sever ans in config.py set up `OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "ollama server url")` here paste the server link or you ollama
+#### if you want to use ollama (for llm)
+first download the ollama and start the ollama server and in config.py set up `OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "ollama server url")` here paste the server link of ollama
+
+#### if you want to use hugging face 
+* got to huggingface website create api tokken 
+* set up the model you what to use by going to config.py and adding the model name in  `HF_LLM_MODEL = os.getenv("HF_LLM_MODEL", "Model id of model you want to use")`
+* create a .env file and set up you huggingface api token `HUGGINGFACEHUB_API_TOKEN= "Your api Token"` 
 
 
 ### Step 3: Run the Application!
