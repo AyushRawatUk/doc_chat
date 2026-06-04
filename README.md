@@ -80,7 +80,7 @@ python -m venv venv
 pip install -r requirements.txt
 ```
 
-### Step 4: Add Model 
+### Step 3: Add Model 
 download the model from -> https://www.kaggle.com/models/ayushrawat0009/finalbert-tuned-model (embedding model)
 then go to config.py `EMBEDDING_MODEL_PATH = os.getenv(
     "EMBEDDING_MODEL_PATH", 
@@ -96,13 +96,13 @@ first download the ollama and start the ollama server and in config.py set up `O
 * create a .env file and set up you huggingface api token `HUGGINGFACEHUB_API_TOKEN= "Your api Token"` 
 
 
-### Step 3: Run the Application!
+### Step 4: Run the Application!
 Start the unified server launcher:
 ```powershell
 python run.py
 ```
 
-### Step 4: Access in Browser
+### Step 5: Access in Browser
 Open your browser and navigate to:
 👉 **[http://127.0.0.1:8000/](http://127.0.0.1:8000/)**
 
