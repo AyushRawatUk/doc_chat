@@ -92,7 +92,7 @@ first download the ollama and start the ollama server and in config.py set up `O
 
 #### if you want to use hugging face 
 * got to huggingface website create api tokken 
-* set up the model you what to use by going to config.py and adding the model name in  `HF_LLM_MODEL = os.getenv("HF_LLM_MODEL", "Model id of model you want to use")`
+* set up the model you want to use by going to config.py and adding the model name in  `HF_LLM_MODEL = os.getenv("HF_LLM_MODEL", "model name")`
 * create a .env file and set up you huggingface api token `HUGGINGFACEHUB_API_TOKEN= "Your api Token"` 
 
 
