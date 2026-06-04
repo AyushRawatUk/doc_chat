@@ -1,0 +1,132 @@
+[
+  {
+    "chunk_index": 0,
+    "text": "Fundamentals of Machine Learning: A Focus on Regression\nand Regularization\n1. Introduction to Machine Learning (ML)\nMachine Learning (ML) is a subfield of artificial intelligence (AI) that focuses on building systems\ncapable of learning from data, identifying patterns, and making decisions with minimal human\nintervention. Unlike traditional programming, where explicit rules are coded to solve a",
+    "page": 1
+  },
+  {
+    "chunk_index": 1,
+    "text": "ntion. Unlike traditional programming, where explicit rules are coded to solve a problem, ML\nalgorithms learn these rules directly from the data.\nThe core premise is to build a mathematical model based on sample data, known as \"training data,\" to\nmake predictions or decisions without being explicitly programmed to do so. As the models are\nexposed to new data, they are able to independently adapt,",
+    "page": 1
+  },
+  {
+    "chunk_index": 2,
+    "text": "so. As the models are\nexposed to new data, they are able to independently adapt, uncovering previous or newly emerging\npatterns.\nMachine Learning is broadly categorized into three main types:\n1. Supervised Learning: The algorithm is trained on a labeled dataset, meaning the input data is\npaired with the correct output. The model learns the mapping function from inputs to outputs.\n2. Unsupervised",
+    "page": 1
+  },
+  {
+    "chunk_index": 3,
+    "text": "t. The model learns the mapping function from inputs to outputs.\n2. Unsupervised Learning: The algorithm is given unlabeled data and must find the underlying\nstructure or patterns within it on its own.\n3. Reinforcement Learning: The algorithm learns by interacting with an environment, receiving\nrewards or penalties for its actions, aiming to maximize the cumulative reward.\nThis report will focus",
+    "page": 1
+  },
+  {
+    "chunk_index": 4,
+    "text": "or its actions, aiming to maximize the cumulative reward.\nThis report will focus on two foundational supervised learning algorithms—Linear Regression and\nLogistic Regression—and a crucial technique for improving model performance called Regularization.\n2. Linear Regression\nLinear Regression is perhaps one of the most well-known and well-understood algorithms in statistics\nand machine learning. It",
+    "page": 1
+  },
+  {
+    "chunk_index": 5,
+    "text": "well-known and well-understood algorithms in statistics\nand machine learning. It is a supervised learning algorithm used for predicting a continuous numerical\nvalue.\nConcept\nThe goal of linear regression is to model the relationship between a dependent variable (the target we\nwant to predict) and one or more independent variables (the features). It does this by fitting a linear\nequation to the",
+    "page": 1
+  },
+  {
+    "chunk_index": 6,
+    "text": "ndent variables (the features). It does this by fitting a linear\nequation to the observed data.\nSimple Linear Regression: Involves one independent variable. The relationship is modeled as a\nstraight line where the dependent variable is calculated using the independent variable, a y-\nintercept, a slope (coefficient), and an expected error term.\nMultiple Linear Regression: Involves two or more",
+    "page": 1
+  },
+  {
+    "chunk_index": 7,
+    "text": "t), and an expected error term.\nMultiple Linear Regression: Involves two or more independent variables. The relationship is\nmodeled as a hyperplane where multiple independent variables, each with their own assigned\ncoefficient, combine to predict the target outcome.",
+    "page": 1
+  },
+  {
+    "chunk_index": 8,
+    "text": "The algorithm \"learns\" by finding the optimal values for the coefficients. The most common method\nto achieve this is Ordinary Least Squares (OLS). OLS calculates the difference between the actual\ndata points and the predicted values on the line (these differences are called residuals) and seeks to\nminimize the sum of the squared residuals.\nBy minimizing this error, the algorithm finds the line of",
+    "page": 2
+  },
+  {
+    "chunk_index": 9,
+    "text": "the squared residuals.\nBy minimizing this error, the algorithm finds the line of \"best fit\" that represents the general trend of\nthe data.\nApplications\nLinear regression is used when the output variable is continuous. Examples include:\nPredicting house prices based on square footage, location, and number of bedrooms.\nForecasting sales revenue based on advertising spend.\nEstimating a person's life",
+    "page": 2
+  },
+  {
+    "chunk_index": 10,
+    "text": "Forecasting sales revenue based on advertising spend.\nEstimating a person's life expectancy based on health indicators.\n3. Logistic Regression\nDespite its name containing the word \"regression,\" Logistic Regression is actually a powerful\nalgorithm used for classification tasks, not continuous prediction. It is widely used when the\ndependent variable is categorical, most commonly binary (two",
+    "page": 2
+  },
+  {
+    "chunk_index": 11,
+    "text": "idely used when the\ndependent variable is categorical, most commonly binary (two classes).\nConcept\nInstead of predicting a continuous value like linear regression, logistic regression predicts the\nprobability that an instance belongs to a specific class. Because it predicts a probability, the output\nmust be between 0 and 1.\nTo achieve this, logistic regression uses the Logistic Function (also",
+    "page": 2
+  },
+  {
+    "chunk_index": 12,
+    "text": "n 0 and 1.\nTo achieve this, logistic regression uses the Logistic Function (also known as the Sigmoid function).\nThe function takes any real-valued number and maps it into a value between 0 and 1. It is defined such\nthat it maps large positive values close to 1 and large negative values close to 0.\nIn logistic regression, the model calculates a combined score based on the features and their",
+    "page": 2
+  },
+  {
+    "chunk_index": 13,
+    "text": "egression, the model calculates a combined score based on the features and their learned\nweights. It then passes this score through the sigmoid function to output a final probability.\nDecision Boundary\nOnce the probability is calculated, a threshold is applied to make the final classification. Typically, the\nthreshold is set at 0.5.\nIf the predicted probability is greater than or equal to 0.5,",
+    "page": 2
+  },
+  {
+    "chunk_index": 14,
+    "text": "old is set at 0.5.\nIf the predicted probability is greater than or equal to 0.5, the instance is classified into Class 1.\nIf the predicted probability is less than 0.5, the instance is classified into Class 0.\nApplications\nLogistic regression is used for binary classification problems (though it can be extended to multi-class\nproblems). Examples include:\nSpam Detection: Classifying an email as",
+    "page": 2
+  },
+  {
+    "chunk_index": 15,
+    "text": "multi-class\nproblems). Examples include:\nSpam Detection: Classifying an email as \"Spam\" or \"Not Spam\".",
+    "page": 2
+  },
+  {
+    "chunk_index": 16,
+    "text": "symptoms.\nCredit Scoring: Determining if a customer is likely to default on a loan.\n4. Regularization\nWhen training machine learning models, a common problem is overfitting. Overfitting occurs when a\nmodel learns the training data too well, capturing the noise and random fluctuations rather than the\nunderlying pattern. An overfitted model performs exceptionally well on the training data but",
+    "page": 3
+  },
+  {
+    "chunk_index": 17,
+    "text": "attern. An overfitted model performs exceptionally well on the training data but poorly on\nnew, unseen data.\nRegularization is a set of techniques used to prevent overfitting by discouraging the model from\nbecoming too complex. It achieves this by adding a \"penalty\" term to the loss function that the model\nis trying to minimize.\nThe total loss function becomes the standard error (the difference",
+    "page": 3
+  },
+  {
+    "chunk_index": 18,
+    "text": "to minimize.\nThe total loss function becomes the standard error (the difference between the model's predictions\nand actual data) plus a penalty for model complexity. A hyperparameter (often referred to as lambda)\ncontrols the strength of the regularization. A higher value means more regularization, leading to a\nsimpler model.\nTypes of Regularization in Regression\nThe two most common types of",
+    "page": 3
+  },
+  {
+    "chunk_index": 19,
+    "text": "impler model.\nTypes of Regularization in Regression\nThe two most common types of regularization applied to regression models are Ridge Regression (L2)\nand Lasso Regression (L1).\n4.1. Ridge Regression (L2 Regularization)\nRidge regression adds a penalty term proportional to the square of the magnitude of the\ncoefficients.\nEffect: It shrinks the coefficients of less important features close to zero,",
+    "page": 3
+  },
+  {
+    "chunk_index": 20,
+    "text": "s.\nEffect: It shrinks the coefficients of less important features close to zero, but it rarely forces\nthem exactly to zero. This helps in reducing model complexity and handling multicollinearity\n(when independent variables are highly correlated).\n4.2. Lasso Regression (L1 Regularization)\nLasso (Least Absolute Shrinkage and Selection Operator) regression adds a penalty term proportional\nto the",
+    "page": 3
+  },
+  {
+    "chunk_index": 21,
+    "text": "nkage and Selection Operator) regression adds a penalty term proportional\nto the absolute value of the magnitude of the coefficients.\nEffect: Unlike Ridge, Lasso has the ability to shrink coefficients completely to zero. This means it\nacts as a form of feature selection, effectively removing less important features from the model\nentirely. This is particularly useful when dealing with datasets",
+    "page": 3
+  },
+  {
+    "chunk_index": 22,
+    "text": "from the model\nentirely. This is particularly useful when dealing with datasets that have a large number of\nfeatures.\nSummary of Regularization\nRegularization is crucial for building models that generalize well to new data. By applying L1 or L2\nregularization, data scientists can control the complexity of Linear and Logistic regression models,\nensuring they remain robust and reliable.\n5.",
+    "page": 3
+  },
+  {
+    "chunk_index": 23,
+    "text": "ear and Logistic regression models,\nensuring they remain robust and reliable.\n5. Conclusion",
+    "page": 3
+  },
+  {
+    "chunk_index": 24,
+    "text": "learning, handling continuous and categorical outcomes, respectively. While powerful, these models\nare susceptible to overfitting, especially when dealing with complex datasets. Regularization\ntechniques like Ridge (L2) and Lasso (L1) are essential tools for managing this complexity, improving\nmodel generalizability, and ensuring that ML solutions remain effective when deployed in real-world",
+    "page": 4
+  },
+  {
+    "chunk_index": 25,
+    "text": "ity, and ensuring that ML solutions remain effective when deployed in real-world\nscenarios.",
+    "page": 4
+  }
+]
